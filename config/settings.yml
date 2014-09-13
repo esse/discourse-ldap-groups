@@ -1,0 +1,7 @@
+ldap_groups:
+  ldap_groups_enabled: true
+  ldap_groups_host: localhost
+  ldap_groups_user: "cn=admin,dc=example,dc=org"
+  ldap_groups_password: "foobar"
+  ldap_groups_port: 389
+  ldap_groups_base_dn: "dc=example, dc=org"
