@@ -5,3 +5,7 @@ ldap_groups:
   ldap_groups_password: "foobar"
   ldap_groups_port: 389
   ldap_groups_base_dn: "dc=example, dc=org"
+  ldap_groups_create_categories: false
+  ldap_group_category_parent_id: ""
+  ldap_group_deleted_category_parent_id: ""
+  ldap_group_category_color: "808281"
