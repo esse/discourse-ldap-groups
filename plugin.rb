@@ -114,7 +114,7 @@ end
 after_initialize do
   module ::LdapGroups
     class UpdateJob < ::Jobs::Scheduled
-      every 1.day
+      every 1.hour
 
       def execute(args)
         return unless SiteSetting.ldap_groups_enabled
