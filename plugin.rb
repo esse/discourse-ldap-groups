@@ -22,10 +22,9 @@ module ::LdapGroups
     ldap = LdapGroups.connect
 
     base_dn = SiteSetting.ldap_groups_base_dn
-    filter = Net::LDAP::Filter.eq('objectclass', 'posixGroup')
 
     ldap_group_names = Array.new
-    ldap.search(:base => base_dn, :filter => filter) do |entry|
+    ldap.search(:base => base_dn) do |entry|
       LdapGroups.update_from_ldap_entry entry
       ldap_group_names << entry.cn.first
     end
